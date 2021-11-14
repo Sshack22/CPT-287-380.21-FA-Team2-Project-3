@@ -12,6 +12,7 @@ public class Program {
 		FileInputStream inputFile = new FileInputStream("Morse_Code.txt");
 		
 		Scanner scanner = new Scanner(inputFile);	// Input file scanner
+		Scanner userScanner = new Scanner(System.in);
 
 		TreeNode root = new TreeNode(' ');
 
@@ -22,8 +23,15 @@ public class Program {
 			Methods.builder(token, root);
 
 		}
+//		System.out.println("enter characters to encode: ");
+//		String decode = userScanner.nextLine();
+//		
+//		System.out.print(Methods.decode(decode, root));
+//		
 		
-		System.out.print(root.right.left.val);
+		
+		
+		System.out.print(root.left.left.right.val);
 		scanner.close();
 	}
 }

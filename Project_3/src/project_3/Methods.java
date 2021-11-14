@@ -9,7 +9,7 @@ public class Methods {
 		
 		int tokenLength = token.length() - 1;
 		
-		for (int i = 0; i < token.length(); i++) {
+		for (int i = 1; i < token.length(); i++) {
 			
 			char c = token.charAt(i);
 
@@ -18,7 +18,7 @@ public class Methods {
 					TreeNode newLeft = new TreeNode(' ');
 					root.left = newLeft;
 					if (i == tokenLength) {
-						root.val = letter;
+						newLeft.val = letter;
 					} else { root = newLeft; }
 				} else {
 					if (i == tokenLength) {
@@ -33,7 +33,7 @@ public class Methods {
 					TreeNode newRight = new TreeNode(' ');
 					root.right = newRight;
 					if (i == tokenLength) {
-						root.val = letter;
+						newRight.val = letter;
 					} else { root = newRight; }
 				} else {
 					if (i == tokenLength) {
@@ -45,24 +45,6 @@ public class Methods {
 
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
 	}
+
 }
