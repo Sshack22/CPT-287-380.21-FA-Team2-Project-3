@@ -17,7 +17,7 @@ public class BinaryTreeAlgorithms {
 	 */
 	public static void preorderTraverse(TreeNode root) {
 		if(root != null) {
-			System.out.print(String.valueOf(root.val) + ' '); // visit the root
+			System.out.print(String.valueOf(root.val)+','); // visit the root
 			preorderTraverse(root.left);
 			preorderTraverse(root.right);
 		}
@@ -29,11 +29,9 @@ public class BinaryTreeAlgorithms {
 	 */
 	public static void inorderTraverse(TreeNode root) {
 		if(root != null) {
-			System.out.print("( ");
 			inorderTraverse(root.left);
-			System.out.print(String.valueOf(root.val) + ' '); // visit the root
+			System.out.print(String.valueOf(root.val) + ','); // visit the root
 			inorderTraverse(root.right);
-			System.out.print(") ");
 		}
 	}
 	
