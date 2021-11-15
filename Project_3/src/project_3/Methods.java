@@ -27,6 +27,7 @@ public class Methods {
 					if (i == tokenLength) { newLeft.val = letter; } // Assign the letter to the node
 					else { root = newLeft; } // Else, move down tree to the left
 				// Else, left node is not null
+
 				} else {
 					// If current character is the final one
 					if (i == tokenLength) { root.left.val = letter; } // Assign the letter to the node
@@ -42,6 +43,7 @@ public class Methods {
 					if (i == tokenLength) { newRight.val = letter; } // Assign the letter to the node
 					else { root = newRight; } // Else, move down tree to the right
 				// Else, right node is not null
+
 				} else {
 					// If current character is the final one
 					if (i == tokenLength) { root.right.val = letter; } // Assign the letter to the node
@@ -59,4 +61,5 @@ public class Methods {
 	public String decode(String input) {
 		//TODO FINISH METHOD
 	}
+
 }
