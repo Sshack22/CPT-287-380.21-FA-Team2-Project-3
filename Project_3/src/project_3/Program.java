@@ -19,14 +19,28 @@ public class Program {
 			Methods.builder(token, root); // Create node for current line
 		} // End while
 		
-		//TODO: Create loop for user input
-		
-		//TODO: Read user input and determine if decode or encode
-		
-		//TODO: Remove debug code
-		//BinaryTreeAlgorithms.preorderTraverse(root);
-		
 		inputFile.close(); // Close file
 		scanner.close(); // Close scanner
+		
+		// Create input scanner for console
+		Scanner inputScanner = new Scanner(System.in);
+		
+		String userPrompt = "Please enter text to encode/decode:"; 
+		// Initialize string variable to store console inputs
+		String input = " ";
+		System.out.println(userPrompt); // Prompt user
+		// Create loop for user input
+		while(inputScanner.hasNext()) {			
+			input = inputScanner.nextLine(); // Store console input
+			if(input.charAt(0) == '.' || input.charAt(0) == '-') { // If input starts with a dot or dash
+				System.out.println(Methods.decode(input,root));	 // Pass input into decode method
+			} else {
+				System.out.println(Methods.encode(input,root)); // Pass input into encode method
+			}
+			System.out.println();
+			System.out.println(userPrompt); // Prompt user
+		}
+		
+		inputScanner.close(); // Close scanner
 	}
 }
