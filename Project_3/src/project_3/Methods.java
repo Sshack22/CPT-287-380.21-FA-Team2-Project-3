@@ -89,9 +89,37 @@ public class Methods {
 		else if(encodeSearch(letter, root.right, path)) { path.add('-'); return true; } // Add dash to stack for every right path
 		else {return false;}
 	}
-	
+
 	public static String decode(String input, TreeNode root) {
-		//TODO FINISH METHOD
-		return "FINISH ME: DECODE METHOD";
+
+		String result = "";
+		TreeNode current = root;
+
+		for (int i = 0; i < input.length(); i++) {
+
+			if (input.charAt(i) == ' ') { // If a space, then append the node value to result.
+				result += current.val;
+				i++;
+				current = root; // Return current to roots position.
+
+			}
+
+			if (input.charAt(i) == '.') { // If char is a '.', traverse left.
+				current = current.left;
+
+			}
+
+			else {
+				current = current.right; // If char is a '-', traverse right.
+			}
+
+			if (i == input.length() - 1) { // When we reach the end of the input, append the current node to result.
+				result += current.val;
+
+			}
+
+		}
+
+		return result;
 	}
 }
