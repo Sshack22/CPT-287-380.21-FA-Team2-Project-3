@@ -60,7 +60,6 @@ public class Methods {
 	 * @return: string containing dots and dashes ('.' and '-') representing input characters
 	 */
 	public static String encode(String input, TreeNode root) {
-		//TODO FINISH METHOD
 		String output = "";
 		for (int i = 0; i < input.length(); i++) {
 			char letter = input.charAt(i);
@@ -101,12 +100,10 @@ public class Methods {
 				result += current.val;
 				i++;
 				current = root; // Return current to roots position.
-
 			}
 
 			if (input.charAt(i) == '.') { // If char is a '.', traverse left.
 				current = current.left;
-
 			}
 
 			else {
@@ -115,9 +112,7 @@ public class Methods {
 
 			if (i == input.length() - 1) { // When we reach the end of the input, append the current node to result.
 				result += current.val;
-
 			}
-
 		}
 
 		return result;
