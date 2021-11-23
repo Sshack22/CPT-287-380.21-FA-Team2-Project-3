@@ -64,8 +64,6 @@ public class Methods {
 		for (int i = 0; i < input.length(); i++) {
 			char letter = input.charAt(i);
 			if(letter == ' ') { continue; }
-			//TODO REMOVE DEBUG CODE
-//			System.out.println(letter);
 			Stack<Character> path = new Stack<>();
 			encodeSearch(letter, root, path);
 			while(!path.isEmpty()) { output += path.pop();}
