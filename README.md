@@ -8,7 +8,7 @@ User can input a string to encode and decode a message that the user enters (e.g
    
    
    
-Project assumesthat the character delimiters are simply spaces and that the user input string has only lowercase letters with no spaces.
+Project assumes that the character delimiters are simply spaces and that the user input string has only lowercase letters with no spaces.
 
 # Members
 ### Luke Hunt
